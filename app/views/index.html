@@ -33,56 +33,36 @@
 
       <!-- Change the page title here -->
       <h1>
-        NHS.UK prototype kit
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Version {{version}}</span>
+        Git & Heroku
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Deploy my prototype</span>
       </h1>
 
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-
-      <p class="nhsuk-lede-text">
-        This kit lets you rapidly create HTML prototypes of NHS services.
-      </p>
-
-      <hr>
-
-      <h2>
-        About this page
-      </h2>
-
-      <p>
-        Use this page as the index for your project.
-      </p>
-      
-      <p>
-        You'll find the code for this page at <strong>/app/views/index.html</strong>.
-      </p>
-
-      <p>
-        There is also an <a href="/page-example">example page</a>, which contains a selection of NHS.UK frontend styles and components.
-      </p>
-
-      <hr>
-
-      <h2>
-        Get started
-      </h2>
-
-      <p>Get started by using the:</p>
+      <h2>Setting up Git:</h2>
 
       <ul>
-        <li>
-          <a href="/docs/how-tos">how to guides</a>
-        </li>
-        <li>
-          <a href="/docs/page-templates">page templates</a>
-        </li>
-        <li>
-          code snippets for styles and components from the <a href="https://service-manual.nhs.uk/design-system">NHS digital service manual</a>
-        </li>
+        <li>Create a new Git repository</li>
+        <li>Download nhs prototype kit and drop into a new folder</li>
+        <li>Open your prototype directory in the terminal (right click, open in terminal)</li>
+        <li>In terminal: 
+          <ul>
+            <li>git status - show all new/changed files (red) </li>
+            <li>git add filename - add new file (first time you can do git add * to add everything)</li>
+            <li>git commit -m "message here" - commit new files to be pushed</li>
+            <li>git remote add origin https//new-github-repo.url - connect your folder to the new github repo</li>
+            <li>git push -u origin master - push the commits to the new repo's master branch</li>        
       </ul>
 
-      <!-- End of content -->
+      <p> That's it for the Git setup, now to link up to Heroku</p>
+
+      <h2>Setting up Heroku:</h2>
+
+      <ul>
+        <li> Login or make a<a href="https://www.heroku.com/"> Heroku</a> account </li>
+        <li> login to the dashboard and create a new app (this will be the name in the URL)</li>
+        <li> Deploy tab: Deployment method, choose git and search for your new repo to connect to, then below choose a branch and select enable automatic deployment </li>
+        <li> On the settings tab, reveal Config vars and set username and password as key/values: PROTOTYPE_USERNAME: / PROTOTYPE_PASSWORD </li>
+        <li> Go back to deploy tab, under Manual deploy, hit deploy branch. Once inital build is deployed, go to the url provided and you should be prompted for the username and password for your new heroku prototype! </li>
+      </ul>
 
     </div>
   </div>
